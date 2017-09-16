@@ -4,9 +4,9 @@ export default {
   name: 'filtersList',
   config: {
     bindings: {
-      filters: '<', 
-      selected : '<', 
-      showDetails : '&onSelected'
+      filters: '<',
+      selected: '<',
+      showDetails: '&onSelected'
     },
     templateUrl: 'src/filters/components/list/FiltersList.html'
   }
