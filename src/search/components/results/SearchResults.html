@@ -1,4 +1,4 @@
-<h2>Search Results</h2>
+<h2 ng-if="$ctrl.results.length > 0">Search Results</h2>
 
 <div flex-xs layout="column" ng-repeat="result in $ctrl.results">
   <md-card md-theme="default">

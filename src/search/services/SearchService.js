@@ -7,18 +7,36 @@
  * @constructor
  */
 function SearchService($q) {
-  var filters = {};
+  const filters = {};
 
   // Promise-based API
   return {
     addFilter: function(filter) {
-      console.log("SS ADDING FILTER", filter);
-      filters[filter.name] = filter;
+      if(filter.tagFilter) {
+        filters[filter.name] = filter;
+      }
     },
 
     search: function(blockchains) {
       // Simulate async nature of real remote calls
-      const results = blockchains;
+      const results = [];
+
+      // return early if no filters
+      if(Object.keys(filters).length < 1) {
+        return $q.when(results);
+      }
+
+      for(const blockchain of blockchains) {
+        let pass = true;
+        for(const filter of Object.values(filters)) {
+          if(blockchain.tags.indexOf(filter.tagFilter) === -1) {
+            pass = false;
+          }
+        }
+        if(pass) {
+          results.push(blockchain);
+        }
+      }
 
       return $q.when(results);
     }
