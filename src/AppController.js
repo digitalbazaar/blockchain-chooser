@@ -10,7 +10,7 @@ function AppController(FiltersService, $mdSidenav) {
   self.selected = null;
   self.filters = [];
   self.selectFilter = selectFilter;
-  self.toggleList = toggleFiltersList;
+  self.toggleFilters = toggleFilters;
 
   // Load all registered users
 
@@ -28,7 +28,7 @@ function AppController(FiltersService, $mdSidenav) {
   /**
    * Hide or Show the 'left' sideNav area
    */
-  function toggleFiltersList() {
+  function toggleFilters() {
     $mdSidenav('left').toggle();
   }
 
