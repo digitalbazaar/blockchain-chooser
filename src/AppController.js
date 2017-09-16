@@ -4,21 +4,30 @@
  * @param $mdSidenav
  * @constructor
  */
-function AppController(FiltersService, $mdSidenav) {
+function AppController(FiltersService, BlockchainsService, SearchService,
+  $mdSidenav, $scope) {
   var self = this;
 
   self.selected = null;
   self.filters = [];
+  self.results = [];
   self.selectFilter = selectFilter;
   self.toggleFilters = toggleFilters;
+  self.updateFilters = updateFilters;
 
-  // Load all registered users
+  // Load all filters and blockchains
 
   FiltersService
     .loadAllFilters()
     .then( function(filters) {
       self.filters = [].concat(filters);
       self.selected = filters[0];
+    });
+
+  BlockchainsService
+    .loadAllBlockchains()
+    .then( function(blockchains) {
+      self.blockchains = [].concat(blockchains);
     });
 
   // *********************************
@@ -36,9 +45,21 @@ function AppController(FiltersService, $mdSidenav) {
    * Select the current avatars
    * @param menuId
    */
-  function selectFilter ( user ) {
-    self.selected = angular.isNumber(user) ? $scope.users[user] : user;
+  function selectFilter ( filter ) {
+    self.selected = angular.isNumber(filter) ? $scope.filters[filter] : filter;
+  }
+
+  function updateFilters ( filter ) {
+    console.log("UPDATE FILTERS CALLED", filter);
+    SearchService.addFilter(filter);
+    SearchService.search(self.blockchains).then(results => {
+      console.log("BLOCKCHAIN SEARCH RESULTS:", results);
+      self.results = results;
+    });
   }
 }
 
-export default [ 'FiltersService', '$mdSidenav', AppController ];
+export default [
+  'FiltersService', 'BlockchainsService', 'SearchService', '$mdSidenav',
+  '$scope', AppController
+];

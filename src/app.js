@@ -7,8 +7,11 @@ import 'angular-material';
 
 import AppController from 'src/AppController';
 import Filters from 'src/filters/Filters';
+import Blockchains from 'src/blockchains/Blockchains';
+import Search from 'src/search/Search';
 
-export default angular.module( 'starter-app', [ 'ngMaterial', Filters.name ] )
+export default angular.module( 'starter-app', [ 'ngMaterial',
+  Filters.name, Blockchains.name, Search.name ] )
   .config(($mdIconProvider, $mdThemingProvider) => {
     // Register the user `avatar` icons
     $mdIconProvider

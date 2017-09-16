@@ -41,13 +41,15 @@
     <md-content flex id="content">
       <!-- Custom FilterDetails component -->
       <filter-details
-          selected="app.selected" >
+          selected="app.selected"
+          on-change="app.updateFilters(filter)">
       </filter-details>
+
       <!-- Custom SearchResults component -->
       <search-results
-          blockchains="app.blockchains"
-          filter="app.searchFilter">
+          results="app.results">
       </search-results>
+
     </md-content>
 
   </div>
