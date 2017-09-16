@@ -1,0 +1,33 @@
+<p>
+Blockchain consensus is the process through which participants in the
+network come to agreement on the state of the system.
+</p>
+
+<p>
+Select the desired consensus process for your Blockchain below:
+</p>
+
+<md-radio-group ng-model="$ctrl.selected.tagFilter">
+  <md-radio-button value="proofOfWork">Proof of Work<br/>
+    <span class="help">
+Consensus is determined by the group of entities that have burned the most
+amount of energy.
+    </span>
+  </md-radio-button>
+  <md-radio-button value="proofOfStake">Proof of Stake<br/>
+    <span class="help">
+Consensus is determined by the group of entities that have the most to lose if
+the network fails.
+    </span>
+  </md-radio-button>
+  <md-radio-button value="majorityVote">Majority Voting<br/>
+    <span class="help">
+Consensus is determined by a 2/3rds majority vote.
+    </span>
+  </md-radio-button>
+  <md-radio-button value="benevolentDictator">Benevolent Dictator<br/>
+    <span class="help">
+Consensus is determined by a single entity that everyone in the network trusts.
+    </span>
+  </md-radio-button>
+</md-radio-group>
