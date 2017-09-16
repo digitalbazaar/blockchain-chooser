@@ -7,7 +7,6 @@ class SearchResultsController  {
    * @param $log
    */
   constructor($scope) {
-
   }
 }
 export default SearchResultsController;

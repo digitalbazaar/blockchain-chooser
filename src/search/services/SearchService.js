@@ -11,6 +11,15 @@ function SearchService($q) {
 
   // Promise-based API
   return {
+    getActiveFilters: function() {
+      const results = [];
+      for(const filter of Object.values(filters)) {
+        results.push(filter.tagFilter);
+      }
+
+      return results;
+    },
+
     addFilter: function(filter) {
       if(filter.tagFilter) {
         filters[filter.name] = filter;

@@ -11,6 +11,7 @@ function AppController(FiltersService, BlockchainsService, SearchService,
   self.selected = null;
   self.filters = [];
   self.results = [];
+  self.activeFilters = ['foo'];
   self.selectFilter = selectFilter;
   self.toggleFilters = toggleFilters;
   self.updateFilters = updateFilters;
@@ -55,6 +56,8 @@ function AppController(FiltersService, BlockchainsService, SearchService,
     SearchService.search(self.blockchains).then(results => {
       console.log("BLOCKCHAIN SEARCH RESULTS:", results);
       self.results = results;
+      self.activeFilters = SearchService.getActiveFilters();
+      console.log("ACTIVE RFILTERS", self.activeFilters);
     });
   }
 }
