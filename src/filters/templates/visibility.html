@@ -1,0 +1,22 @@
+<p>
+A Blockchain's visibility determines who can read its contents.
+Public blockchains are visible by anyone with access to the Internet.
+Private blockchains are visible by a smaller set of entities.
+</p>
+
+<p>
+Select the desired visibility of your Blockchain below:
+</p>
+
+<md-radio-group ng-model="$ctrl.selected.tagFilter">
+  <md-radio-button value="public">Public<br/>
+    <span class="help">
+A public blockchain is visible to anyone connected to the Internet.
+    </span>
+  </md-radio-button>
+  <md-radio-button value="private">Private<br/>
+    <span class="help">
+A private blockchain is only visible to a select group of entities.
+    </span>
+  </md-radio-button>
+</md-radio-group>
