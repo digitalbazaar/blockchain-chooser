@@ -10,43 +10,50 @@ function BlockchainsService($q) {
   var blockchains = [
     {
       name: 'Bitcoin',
-      tags: ['public', 'permissionless', 'payments'],
+      tags: ['public', 'permissionless', 'payments', 'proofOfWork'],
       icon: 'https://bitcoin.org/img/icons/opengraph.png',
       homepage: 'https://bitcoin.org/'
     },
     {
       name: 'Ethereum',
-      tags: ['public', 'permissionless', 'smart contracts', 'payments'],
+      tags: [
+        'public', 'permissionless', 'smart contracts', 'payments',
+        'proofOfWork'
+      ],
       icon: 'https://avatars1.githubusercontent.com/u/6250754?v=4&s=200',
       homepage: 'https://www.ethereum.org/'
     },
     {
       name: 'Hyperledger Fabric',
-      tags: ['public', 'private', 'permissioned', 'smart contracts'],
+      tags: [
+        'public', 'private', 'permissioned', 'smart contracts', 'majorityVote'
+      ],
       icon: 'https://avatars3.githubusercontent.com/u/7657900?v=4&s=200',
       homepage: 'https://www.hyperledger.org/projects/fabric'
     },
     {
       name: 'Hyperledger Indy',
-      tags: ['public', 'permissioned', 'identity'],
+      tags: ['public', 'permissioned', 'identity', 'majorityVote'],
       icon: 'https://avatars3.githubusercontent.com/u/7657900?v=4&s=200',
       homepage: 'https://www.hyperledger.org/category/hyperledger-indy'
     },
     {
       name: 'R3 Corda',
-      tags: ['private', 'permissioned', 'smart contracts'],
+      tags: ['private', 'permissioned', 'smart contracts', 'majorityVote'],
       icon: 'https://avatars3.githubusercontent.com/u/22600631?v=4&s=400',
       homepage: 'https://www.corda.net/'
     },
     {
       name: 'Ripple',
-      tags: ['public', 'permissioned', 'payments'],
+      tags: ['public', 'permissioned', 'payments', 'majorityVote'],
       icon: 'https://www.cryptocompare.com/media/19972/ripple.png',
       homepage: 'https://ripple.com/'
     },
     {
       name: 'Veres',
-      tags: ['public', 'private', 'permissioned', 'permissionless', 'identity'],
+      tags: [
+        'public', 'private', 'permissioned', 'permissionless', 'identity',
+        'proofOfWork', 'majorityVote', 'benevolentDictator'],
       icon: 'assets/svg/veres.svg',
       homepage: 'https://demo.ledger.veres.io/'
     }
