@@ -51,13 +51,10 @@ function AppController(FiltersService, BlockchainsService, SearchService,
   }
 
   function updateFilters ( filter ) {
-    console.log("UPDATE FILTERS CALLED", filter);
     SearchService.addFilter(filter);
     SearchService.search(self.blockchains).then(results => {
-      console.log("BLOCKCHAIN SEARCH RESULTS:", results);
       self.results = results;
       self.activeFilters = SearchService.getActiveFilters();
-      console.log("ACTIVE RFILTERS", self.activeFilters);
     });
   }
 }
