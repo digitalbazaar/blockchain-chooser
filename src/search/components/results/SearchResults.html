@@ -1,26 +1,21 @@
-<h2 ng-if="$ctrl.results.length > 0">Search Results</h2>
+<div ng-if="$ctrl.results.length > 0">
+  <h2>Search Results for:</h2>
+  <md-chips ng-if="$ctrl.results.length > 0" ng-model="$ctrl.filters"></md-chips>
 
-<div ng-if="$ctrl.filters.length > 0">
-<md-content class="md-padding" layout="column">
-
-Filters: <md-chips ng-repeat="filter in $ctrl.filters">
-  <md-chip>{{filter}}</md-chip>
-  </md-chips>
+  <md-card md-theme="default" ng-repeat="result in $ctrl.results">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{result.name}}</span>
+        <span class="md-subhead">{{result.summary}}</span>
+      </md-card-title-text>
+      <md-card-title-media>
+        <div class="md-media-sm card-media">
+          <img src="{{result.icon}}">
+        </div>
+      </md-card-title-media>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button href="{{result.homepage}}" target="_blank">More...</md-button>
+    </md-card-actions>
+  </md-card>
 </div>
-
-<md-card md-theme="default" ng-repeat="result in $ctrl.results">
-  <md-card-title>
-    <md-card-title-text>
-      <span class="md-headline">{{result.name}}</span>
-      <span class="md-subhead">Large</span>
-    </md-card-title-text>
-    <md-card-title-media>
-      <div class="md-media-sm card-media">
-        <img src="{{result.icon}}">
-      </div>
-    </md-card-title-media>
-  </md-card-title>
-  <md-card-actions layout="row" layout-align="end center">
-    <md-button>More...</md-button>
-  </md-card-actions>
-</md-card>
