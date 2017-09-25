@@ -39,6 +39,15 @@ function BlockchainsService($q) {
       homepage: 'https://www.ethereum.org/'
     },
     {
+      name: 'Factom',
+      tags: [
+        'public', 'permissionless', 'anchoring', 'proofOfWork'
+      ],
+      icon: 'http://files.coinmarketcap.com.s3-website-us-east-1.amazonaws.com/static/img/coins/200x200/factom.png',
+      summary: 'Provides a document management solution into a blockchain based document platform that eliminates lost documents, reduces audit time and prevents costly disputes.',
+      homepage: 'https://www.factom.com/'
+    },
+    {
       name: 'Hyperledger Fabric',
       tags: [
         'public', 'private', 'permissioned', 'smart contracts', 'majorityVote'
@@ -76,6 +85,15 @@ function BlockchainsService($q) {
       icon: 'https://www.cryptocompare.com/media/19972/ripple.png',
       summary: 'Ripple is a real-time gross settlement system, currency exchange and remittance network.',
       homepage: 'https://ripple.com/'
+    },
+    {
+      name: 'Tierion',
+      tags: [
+        'public', 'permissionless', 'anchoring', 'proofOfWork'
+      ],
+      icon: 'https://pbs.twimg.com/profile_images/622130392057823232/yPkOptzU.png',
+      summary: 'Tierion turns the blockchain into a global platform for verifying any data, file, or process. Use Tierion’s API and tools to anchor a permanent, timestamp proof of your data in the blockchain.',
+      homepage: 'https://tierion.com/'
     },
     {
       name: 'Veres',
