@@ -54,7 +54,7 @@ function BlockchainsService($q) {
       tags: [
         'public', 'permissionless', 'anchoring', 'proofOfWork'
       ],
-      icon: 'http://files.coinmarketcap.com.s3-website-us-east-1.amazonaws.com/static/img/coins/200x200/factom.png',
+      icon: 'https://crunchbase-production-res.cloudinary.com/image/upload/c_limit,h_600,w_600/v1475783591/wpory9jgooppadf7vbb4.png',
       summary: 'Provides a document management solution into a blockchain based document platform that eliminates lost documents, reduces audit time and prevents costly disputes.',
       homepage: 'https://www.factom.com/'
     },

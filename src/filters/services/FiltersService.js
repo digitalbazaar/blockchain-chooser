@@ -27,6 +27,11 @@ function FiltersService($q) {
       name: 'Consensus',
       icon: 'assets/svg/consensus.svg',
       templateUrl: 'src/filters/templates/consensus.html'
+    },
+    {
+      name: 'Features',
+      icon: 'assets/svg/features.svg',
+      templateUrl: 'src/filters/templates/features.html'
     }
   ];
 

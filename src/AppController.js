@@ -11,7 +11,7 @@ function AppController(FiltersService, BlockchainsService, SearchService,
   self.selected = null;
   self.filters = [];
   self.results = [];
-  self.activeFilters = ['foo'];
+  self.activeFilters = [];
   self.selectFilter = selectFilter;
   self.toggleFilters = toggleFilters;
   self.updateFilters = updateFilters;
@@ -46,11 +46,11 @@ function AppController(FiltersService, BlockchainsService, SearchService,
    * Select the current avatars
    * @param menuId
    */
-  function selectFilter ( filter ) {
+  function selectFilter(filter) {
     self.selected = angular.isNumber(filter) ? $scope.filters[filter] : filter;
   }
 
-  function updateFilters ( filter ) {
+  function updateFilters(filter) {
     SearchService.addFilter(filter);
     SearchService.search(self.blockchains).then(results => {
       self.results = results;

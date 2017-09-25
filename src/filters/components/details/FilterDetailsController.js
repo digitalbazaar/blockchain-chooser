@@ -17,7 +17,19 @@ class FilterDetailsController  {
         scope.$ctrl.updateFilter({filter: newValue});
       }, true);
     };
+
+    this.toggle = function(item, selected) {
+      const filter = {
+        name: item,
+        tagFilter: item
+      };
+      if(selected) {
+        $scope.$ctrl.updateFilter({filter: filter});
+      } else {
+        filter.tagFilter = 'none';
+        $scope.$ctrl.updateFilter({filter: filter});
+      }
+    }
   }
 }
 export default FilterDetailsController;
-
