@@ -1,0 +1,42 @@
+<p>
+There are many extra features that a blockchain implementation may provide
+above the basics. Many of these features are market-vertical specific and
+while more narrow in scope, are incredibly helpful for a particular class of
+problems.
+</p>
+
+<p>
+Select as many of the desired features as you want for your Blockchain:
+</p>
+
+<md-checkbox aria-label="Payments" ng-model="payments"
+  ng-change="$ctrl.toggle('payments', payments)">
+  Payments<br/>
+  <span class="help">
+Capable of sending and receiving monetary value.
+  </span>
+</md-checkbox><br>
+
+<md-checkbox aria-label="Smart Contracts" ng-model="contracts"
+  ng-change="$ctrl.toggle('smart contracts', contracts)">
+  Smart Contracts<br/>
+  <span class="help">
+Capable of executing smart contracts.
+  </span>
+</md-checkbox><br>
+
+<md-checkbox aria-label="Identity" ng-model="identity"
+  ng-change="$ctrl.toggle('identity', identity)">
+  Identity<br/>
+  <span class="help">
+Capable of managing identity for people, organizations, and IoT.
+  </span>
+</md-checkbox><br>
+
+<md-checkbox aria-label="Document Archival and Auditing" ng-model="anchoring"
+  ng-change="$ctrl.toggle('anchoring', anchoring)">
+  Document Archival and Auditing<br/>
+  <span class="help">
+Capable of recording the provenance, creation, and modification of documents.
+  </span>
+</md-checkbox>
