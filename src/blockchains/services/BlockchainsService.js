@@ -12,7 +12,8 @@ function BlockchainsService($q) {
       name: '',
       tags: [
         'public', 'private', 'permissioned', 'permissionless', 'identity',
-        'proofOfWork', 'majorityVote', 'benevolentDictator'
+        'payments', 'lightningNetwork', proofOfWork', 'majorityVote',
+        'benevolentDictator'
       ],
       icon: '',
       summary: '',
@@ -27,6 +28,16 @@ function BlockchainsService($q) {
       icon: 'https://bitcoin.org/img/icons/opengraph.png',
       summary: 'Bitcoin is a worldwide cryptocurrency and digital payment system called the first decentralized digital currency, since the system works without a central repository or single administrator.',
       homepage: 'https://bitcoin.org/'
+    },
+    {
+      name: 'Dash',
+      tags: [
+        'public', 'permissionless', 'payments', 'proofOfWork',
+        'lightningNetwork'
+      ],
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Official_Dash_Logo.png',
+      summary: 'Dash (formerly known as Darkcoin and XCoin) is an open source peer-to-peer cryptocurrency that offers all the same features as Bitcoin but also has advanced capabilities, including instant transactions (InstantSend), private transactions (PrivateSend), and decentralized governance (DGBB). Dash\'s decentralized governance and budgeting system makes it the second decentralized autonomous organization.',
+      homepage: 'https://www.dash.org/'
     },
     {
       name: 'Ethereum',
