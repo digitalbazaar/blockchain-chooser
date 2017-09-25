@@ -7,6 +7,19 @@
  * @constructor
  */
 function BlockchainsService($q) {
+  /*
+    {
+      name: '',
+      tags: [
+        'public', 'private', 'permissioned', 'permissionless', 'identity',
+        'proofOfWork', 'majorityVote', 'benevolentDictator'
+      ],
+      icon: '',
+      summary: '',
+      homepage: ''
+    },
+  */
+
   var blockchains = [
     {
       name: 'Bitcoin',
@@ -40,6 +53,15 @@ function BlockchainsService($q) {
       icon: 'https://avatars3.githubusercontent.com/u/7657900?v=4&s=200',
       summary: 'Hyperledger Indy enables creating and managing decentralized, self-sovereign identities using distributed ledgers.',
       homepage: 'https://www.hyperledger.org/category/hyperledger-indy'
+    },
+    {
+      name: 'Litecoin',
+      tags: [
+        'public', 'permissionless', 'payments', 'lightningNetwork', 'proofOfWork'
+      ],
+      icon: 'https://litecoin.org/img/litecoin.svg',
+      summary: 'The Litecoin blockchain is capable of handling higher transaction volume than its counterpart - Bitcoin. Due to more frequent block generation, the network supports more transactions without a need to modify the software in the future.',
+      homepage: 'https://litecoin.org/'
     },
     {
       name: 'R3 Corda',
